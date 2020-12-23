@@ -7,7 +7,9 @@ nav_order: 5
 # Object Oriented Ruby
 {: .no_toc }
 
-placeholder.
+Object-oriented programming (OOP) is a [programming paradigm](http://en.wikipedia.org/wiki/Programming_paradigm) that uses "[objects](http://en.wikipedia.org/wiki/Object_%28computer_science%29)" and their interactions to design applications and computer programs. Object-oriented programming languages may include features such as [encapsulation](http://en.wikipedia.org/wiki/Information_hiding), [modularity](http://en.wikipedia.org/wiki/Module_%28programming%29), [polymorphism](http://en.wikipedia.org/wiki/Polymorphism_in_object-oriented_programming), and [inheritance](http://en.wikipedia.org/wiki/Inheritance_%28computer_science%29).
+
+Objects are the nouns. Methods are the verbs. They are the stuff <s>dreams</s> programs are made of.
 
 ## Table of Contents
 {: .no_toc .text-delta }  
@@ -17,30 +19,16 @@ placeholder.
 
 <!--prettier-ignore-end-->
 
----
-
-id: object-oriented-ruby
-title: Object Oriented Ruby
-
----
-
-## Object Oriented Programming
-
-Object-oriented programming (OOP) is a [programming paradigm](http://en.wikipedia.org/wiki/Programming_paradigm) that uses "[objects](http://en.wikipedia.org/wiki/Object_%28computer_science%29)" and their interactions to design applications and computer programs. Object-oriented programming languages may include features such as [encapsulation](http://en.wikipedia.org/wiki/Information_hiding), [modularity](http://en.wikipedia.org/wiki/Module_%28programming%29), [polymorphism](http://en.wikipedia.org/wiki/Polymorphism_in_object-oriented_programming), and [inheritance](http://en.wikipedia.org/wiki/Inheritance_%28computer_science%29).
-
-Objects are the nouns. Methods are the verbs. They are the stuff <s>dreams</s> programs are made of.
-
-#### Resources
-
-[Programming + Philosophy = Good Times](http://portal.acm.org/citation.cfm?id=1164396)
-
-[Classes, Objects, and Variables from the Pragmatic Guide](http://ruby-doc.com/docs/ProgrammingRuby/html/tut_classes.html)
-
-## OO - OhOh
+## Modelling the Real World
 
 When you write object-oriented code, you're normally looking to model concepts from the real world. (Sometime this is easier said than done!)
 
 In Ruby you will model these concepts by defining _classes_. A class represents a combination of state and methods that operate within (or use) this state. We can create an instance of a class in order to put it to use. We call these instances _objects_.
+
+#### Resources
+
+- [Classes, Objects, and Variables from the Pragmatic Guide](http://ruby-doc.com/docs/ProgrammingRuby/html/tut_classes.html)
+- [Programming + Philosophy = Good Times](http://portal.acm.org/citation.cfm?id=1164396)
 
 ## Class Creation
 
