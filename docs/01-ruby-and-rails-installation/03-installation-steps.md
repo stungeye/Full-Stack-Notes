@@ -1,10 +1,11 @@
 ---
-title: Ruby and Rails Installation
+title: Installation Steps
+parent: Ruby and Rails Installation
 nav_order: 3
 ---
 
 <!--prettier-ignore-start-->
-# Ruby and Rails Installation
+# Installation Steps 
 {: .no_toc }
 
 In this module we will be installing both Ruby and Rails. We will also be setting up our development environment by installing and configuring a source-code editor.
@@ -16,40 +17,6 @@ In this module we will be installing both Ruby and Rails. We will also be settin
 {:toc}
 
 <!--prettier-ignore-end-->
-
-## Objectives
-
-Upon completion of this module, you should be able to:
-
-- Describe the benefits of using Linux for a web development environment.
-- Install a command prompt replacement.
-- Install Linux via the WLS.
-- Install Ruby, Rails, Sqlite3, git, etc.
-- Install a Ruby source-code editor.
-
-## Rails and Windows
-
-![Rails and Windows](bruce-lee-rails-windows-8.jpg){:class="small inline"}
-
-Professional Rails programmers typically develop their applications using a Mac or Linux based operating system. There is excellent support from the Rails community for both of these platforms.
-
-In the past, installing both Ruby and Rails under Windows was difficult. There now exist tools that simplify the installation processing. Previously in this course we used InstantRails as an "all-in-one" installer. We now use a virtualized Linux approach using either the Windows Subsystem for Linux or Vagrant.
-
-## Rails and MacOS
-
-![Rails and MacOS](834px-Apple_logo_black.svg.png){:class="small inline"}
-
-If you are a Mac user you can skip the installation of the Windows Terminal and the WSL.
-
-Instead you should follow [the instructions listed for your version of MacOS or OSX here](https://gorails.com/setup/osx/).
-
-After this you can scroll down to the Ruby Editor section of these notes.
-
-If you get an error that mentions "clock_gettime" should should first run the following command from a terminal:
-
-```bash
-sudo xcode-select --install
-```
 
 ## Installation Plan
 
@@ -97,13 +64,20 @@ Let's install Ubuntu Linux version on the WSL!
 
 **⚠️ WARNING:** It's crucial that you install Ubuntu 18.04. The WSL currently has issues with Ubuntu 20.04.
 
-## WSL Version Two is Too New
+### WSL Version Two is Optional
 
-Version 2 of the WSL was just recently released. To keep things stable we're sticking with WSL Version 1 for now.
+Feel free to update your WSL to the newly released WSL2 by [following these WSL2 update instructions](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-2---update-to-wsl-2).
 
-**Note:** For older versions of Windows 10 (build versions less than 16215) you may need to [follow these instructions](https://docs.microsoft.com/en-us/windows/wsl/install-legacy) to install the WSL. [Check your build version of Windows 10](https://docs.microsoft.com/en-us/windows/wsl/troubleshooting#check-your-build-number).
+**📣 NOTE:** If you upgrade to WSL2 it's important that you save all your Rails projects to the home folder of the WSL filesystem.
 
-## Ruby on the WLS
+Naviagte to your WSL home folder from the terminal and then open it in Windows Explorer like this:
+
+```bash
+cd ~
+explorer.exe .
+```
+
+## Installing Ruby
 
 To install Ruby and Git in your Windows Subsystem for Linux. From your WSL prompt:
 
@@ -341,131 +315,4 @@ If, for example, I saved my `first_ruby.rb` file to my Desktop I would navigate 
 
 Congrats! You are done configuring your machine for Ruby on Rails.
 
-You need only continue if you were unable to get the WSL running on your machine.
-
-## VirtualBox & Vagrant
-
-![VirtualBox & Vagrant](static1.squarespace.jpg){:class="small inline"}
-
-**If everything is working with Ruby on WSL you are now done! Do not follow any more of these instructions.**
-
-If you couldn't get Ruby running the WSL you will need to install VirtualBox and Vagrant instead.
-
-Download and install:
-
-- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-- [Vagrant](https://www.vagrantup.com/downloads.html)
-
-VirtualBox should be installed before Vagrant.
-
-Please use all default options during both installations.
-
-## Vagrant Init
-
-We'll work through these instructions together in class.
-
-Start by launching a Windows Terminal. From the terminal:
-
-```bash
-cd \
-mkdir vagrant-rails
-cd vagrant-rails
-vagrant init bivee/rails
-```
-
-This will generate a `Vangrantfile` in your `vagrant-rails` folder. Open this file and change this line:
-
-```yaml
-# config.vm.network "forwarded_port", guest: 80, host: 8080
-```
-
-to this:
-
-```yaml
-config.vm.network "forwarded_port", guest: 3000, host: 3000
-```
-
-_Note that we are both removing a # from the start of the line and modifying guest and host numbers._
-
-## Vagrant Up
-
-The next step is to have Vagrant download and install the virtual Ubuntu Linux machine we'll be using for our Ruby on Rails work.
-
-From your terminal:
-
-```bash
-cd \vagrant-rails
-vagrant up --provider virtualbox
-```
-
-Downloading the VM image may take some time. After this command has finished executing run:
-
-```bash
-vagrant ssh
-```
-
-This should connect you to the Linux VM command prompt.
-
-## Vagrant Up / Suspend / Halt
-
-To put your Vagrant powered VM to sleep you first need to logout of your Linux command prompt:
-
-```bash
-exit
-```
-
-And then from the terminal:
-
-```bash
-vagrant suspend
-```
-
-If you wish to fully shutdown your VM:
-
-```bash
-vagrant halt
-```
-
-The next time you wish to use the VM:
-
-```bash
-vagrant up
-vagrant ssh
-```
-
-All of these commands put be run from within your `vagrant-rails` folder.
-
-## Installing Rails on your VM
-
-Although Ruby is already installed on your Vagrant VM, Rails is not.
-
-Before you can install Rails you need to be at your VM's command prompt. Using the terminal from your `c:\vagrant-rails` folder:
-
-- Run `vagrant up`, if you haven't already.
-- Run `vagrant ssh` to connect to the VM.
-
-You can then install rails with this command:
-
-```bash
-gem install rails
-```
-
-## Updating Node on your VM
-
-From the vagrant command line:
-
-```bash
-sudo apt-get remove nodejs
-curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-sudo apt-get update
-sudo apt-get install nodejs
-```
-
-After that, run:
-
-```bash
-nodejs -v
-```
-
-You should see a reported version of 6.14.4.
+You need only continue to the VirtualBox and Vagrant section if you were unable to get the WSL running on your machine.
