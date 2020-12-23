@@ -19,27 +19,34 @@ You are an experiment and so is this course. :)
 
 ## Full Stack Web Development
 
-![This Course](cat.jpg){:class="small inline"}
+![Our Course Mascot](cat.jpg){:class="small inline"}
 
-In this course I hope to expose you to:
+The goal of this course is to expose you to:
 
-- The Ruby Programming Language
-- The Rails Web Programming Framework
-- The Windows Subsystem for Linux
-- The Git Source Control Tool
+- Ruby Programming Language
+- Rails Web Programming Framework
+- Model-View-Controller Design Pattern
+- RESTful Routing Convention
+- Windows Subsystem for Linux
+- Git Source Control Tool
+- API Consumption and CSV Importing
 - Web Server Configuration & Deployment
 - Pair Programming
 - CSS Frameworks & Tooling
+- Credit Card Processing
 - Containerization (Docker)
 - Moar!
 
 ## Why Ruby?
 
-![Why Ruby?](ruby_makes_me_happy.png){:class="small inline"}
+![Happy happy! Joy joy!](ruby_makes_me_happy.png){:class="small inline"}
 
 - Dynamic interpreted languages are gaining popularity (Perl, Python, Javascript, Lua, &c).
 - Ruby is free (with a very open license for program distribution)
 - Strong programming community (good tutorials, example code, forums, &c)
+- Optimized for "Programming Happiness"
+
+If you've got 30 minutes, why don't you [give Ruby a try in your browser](https://try.ruby-lang.org/).
 
 ## Ruby Design Principles
 
@@ -57,12 +64,12 @@ In this course I hope to expose you to:
 
 ## Why Rails?
 
-![Why Rails?](ruby_rails.png){:class="small inline"}
+![Hop On The Rails](ruby_rails.png){:class="small inline"}
 
 - Model View Controller (MVC) is becoming the defacto standard for coding web apps.
 - Rails code is very DRY (With Rails you **D**on't **R**epeat **Y**ourself)
 - Convention over Configuration (Sane defaults but still customizable)
-- Open Source with over 3,500 contributors.
+- Open Source with over 4,500 contributors.
 
 _Careful!_ The Rails framework is 'opinionated' meaning that it tries to steer you to code in the 'Rails Way'. If your program becomes overly complex or bogged-down in details, you have drifted from the 'Rails Way'.
 
@@ -70,11 +77,11 @@ _Careful!_ The Rails framework is 'opinionated' meaning that it tries to steer y
 
 - [Ruby on Rails Official Website](http://rubyonrails.org/)
 
-## Who's Using Rails
+## Who's Using Rails?
 
-![Who's Using Rails](rubyrails.png){:class="large inline"}
+![Who's Using Rails?](rubyrails.png){:class="large inline"}
 
-These sites were all built on Rails:
+These popular sites were all built on Rails:
 
 - [Shopify](https://www.shopify.ca/)
 - [Airbnb](https://www.airbnb.com/)
@@ -99,7 +106,7 @@ These sites were all built on Rails:
 
 ## Education, Learning and Responsibility
 
-![Education, Learning and Responsibility](understanding-the-brain.jpg){:class="small inline"}
+![You Are Responsible For Your Brain](understanding-the-brain.jpg){:class="small inline"}
 
 _"Education is an admirable thing, but it is well to remember from time to time that nothing that is worth knowing can be taught."_ -- Oscar Wilde
 
