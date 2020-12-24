@@ -8,9 +8,9 @@ nav_order: 4
 # VirtualBox and Vagrant
 {: .no_toc }
 
-**📣 NOTE: If everything is working with Ruby on WSL you are now done!**
+**📣 Note:** If everything is working with Ruby on WSL you are now done!
 
-**Do not follow any more of these instructions unless the WSL didn't work for you.**
+**⚠️ Warning:** Do not follow any more of these instructions unless the WSL didn't work for you.
 
 ## Table of Contents
 {: .no_toc .text-delta }  

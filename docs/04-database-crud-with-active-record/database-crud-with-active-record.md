@@ -4,7 +4,7 @@ nav_order: 6
 ---
 
 <!--prettier-ignore-start-->
-# Database CRUD with AR
+# Database CRUD with ActiveRecord
 {: .no_toc }
 
 placeholder.
