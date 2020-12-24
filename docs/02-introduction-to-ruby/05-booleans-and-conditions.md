@@ -8,8 +8,8 @@ nav_order: 5
 ## Booleans and Conditions
 {: .no_toc }
 
-## Table of Contents
-{: .no_toc .text-delta }
+### Table of Contents
+{: .no_toc }
 
 1. TOC
 {:toc}

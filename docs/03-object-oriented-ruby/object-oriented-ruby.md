@@ -11,8 +11,8 @@ Object-oriented programming (OOP) is a [programming paradigm](http://en.wikipedi
 
 Objects are the nouns. Methods are the verbs. They are the stuff <s>dreams</s> programs are made of.
 
-## Table of Contents
-{: .no_toc .text-delta }  
+### Table of Contents
+{: .no_toc }  
 
 1. TOC
 {:toc}

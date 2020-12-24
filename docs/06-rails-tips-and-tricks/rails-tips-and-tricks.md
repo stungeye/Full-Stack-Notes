@@ -9,8 +9,8 @@ nav_order: 8
 
 placeholder.
 
-## Table of Contents
-{: .no_toc .text-delta }  
+### Table of Contents
+{: .no_toc }  
 
 1. TOC
 {:toc}

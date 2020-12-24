@@ -9,7 +9,7 @@ nav_order: 2
 
 You are an experiment and so is this course. :)
 
-## Table of Contents
+### Table of Contents
 {: .no_toc }
 
 1. TOC

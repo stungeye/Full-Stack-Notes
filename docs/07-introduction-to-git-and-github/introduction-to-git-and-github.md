@@ -11,7 +11,7 @@ Version control, also known as revision control or source control, is the manage
 
 This is a module on the git version control tool.
 
-## Table of Contents
+### Table of Contents
 {: .no_toc }
 
 1. TOC

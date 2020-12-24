@@ -8,8 +8,8 @@ nav_order: 4
 ## Constants, Variables, String and Numbers
 {: .no_toc }
 
-## Table of Contents
-{: .no_toc .text-delta }
+### Table of Contents
+{: .no_toc }
 
 1. TOC
 {:toc}
