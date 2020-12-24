@@ -11,6 +11,8 @@ nav_order: 8
 ### Table of Contents
 {: .no_toc }
 
+Scope defines where in a program a variable is accessible.
+
 1. TOC
 {:toc}
 
@@ -18,7 +20,7 @@ nav_order: 8
 
 ## Scope
 
-Scope defines where in a program a variable is accessible. Where ever a variable is not accessible by your program it is said to be "out of scope" or "outside the current scope."
+When a variable is accessible it is said to be "in scope". Wherever a variable is not accessible by your program it is said to be "out of scope" or "outside the current scope."
 
 From [the Poignant Guide](https://poignant.guide):
 
@@ -57,27 +59,31 @@ NameError: undefined local variable or method 'legs'
 
 ## Scope and Blocks
 
-Unlike methods, blocks can 'see' and modify variables that are defined in their vicinity.
+Unlike methods, blocks can 'see' and modify variables that are defined in their vicinity. This can lead to confusing code:
 
 ```ruby
-fruit = 'dragon fruit' # Will I ever get to eat the dragon fruit?
-double_fruit = fruit * 2
+fruit = 'dragon fruit'   # The fruit variable *will not* be overwritten by the loop.
+double_fruit = fruit * 2 # The double_fruit variable *will* be overwritten by the loop.
 
-['apple','pear','banana'].each do |fruit|
-  double_fruit = fruit * 2
-  puts "I ate one #{fruit}."
+['apple','pear','banana'].each do |fruit| # Creates a second fruit variable with a separate scope.
+  double_fruit = fruit * 2  # double_fruit refers to the variable defined above the block.
+  puts "I ate one #{fruit}. Doubled: #{double_fruit}"
 end
 
-puts "It's true I ate one #{fruit}." #The block is done, so what is our fruit?
-puts "But the double fruit is #{double_fruit}!"
+puts "It's true I ate one #{fruit}." # Still 'dragon fruit'
+puts "But the double fruit is #{double_fruit}!" # 'bananabanana'
 ```
+
+Here the `double_fruit` variable within the block was the same variable as the one defined above.
+
+But there were two versions of the `fruit` variable! It's confusing when block arguments have the same name as other variables.
 
 Output:
 
 ```
-I ate one apple.
-I ate one pear.
-I ate one banana.
+I ate one apple. Doubled: appleapple
+I ate one pear. Doubled: pearpear
+I ate one banana. Doubled: bananabanana
 It's true I ate one dragon fruit.
 But the double fruit is bananabanana!
 ```

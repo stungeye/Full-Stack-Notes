@@ -40,7 +40,7 @@ Upon completion of this tutorial, you should be able to:
 
 ## Setup Instructions
 
-Let's create a new Rails project named 'blog':
+Let's create a new Rails project named 'blog'.
 
 - In your WSL terminal type: `rails new blog`
 
@@ -54,7 +54,7 @@ Now we'll run the built-in test web-server:
 
 - Open a second console window, navigate to your 'blog' folder and type:
 
-`rails server`
+`rails s`
 
 - Load the default welcome screen for your application here:
 
@@ -106,7 +106,7 @@ This command creates a new 'posts' table in your database. This table will conta
 - created_at (timestamp created automatically)
 - updated_at (timestamp created automatically)
 
-**Note:** Even though we created a scaffold for 'Post' (singular) the table created by Rake was named 'posts' (plural). This is a Rails standard. The controller and the views will also reference 'posts' (plural).
+**📣 Note:** Even though we created a scaffold for 'Post' (singular) the table created by Rake was named 'posts' (plural). This is a Rails standard. The controller and the views will also reference 'posts' (plural).
 
 If you want to better understand the DB Migration you should investigate the following file from within your blog project folder:
 
@@ -242,7 +242,7 @@ The each view is inserted into a layout before the HTML is sent to the user's br
 <%= yield %>
 ```
 
-The layout yields to a particular view; how very polite, proper and posh!
+The layout yields to a particular view; how very polite, proper and posh! Try putting some extra marking in the layout and then navigating around your app.
 
 #### Resources
 
@@ -250,9 +250,9 @@ The layout yields to a particular view; how very polite, proper and posh!
 
 ## Script Console
 
-The Rails script console allows us to interact with our project models.
+The Rails console allows us to interact with our project models.
 
-- From a command prompt type: `rails console`
+- From a command prompt type: `rails c`
 
 _(Ensure that you are in your project's root folder.)_
 

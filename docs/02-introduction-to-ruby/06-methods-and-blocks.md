@@ -8,6 +8,8 @@ nav_order: 6
 ## Methods and Blocks 
 {: .no_toc }
 
+Methods do things, they are the verbs of computer programming.
+
 ### Table of Contents
 {: .no_toc }
 
@@ -18,9 +20,7 @@ nav_order: 6
 
 ## Methods
 
-Methods do things, they are the verbs of computer programming.
-
-In Ruby (unlike in Java) we can define methods that aren't explicitly held within a class.
+In Ruby (unlike in Java, for example) we can define methods that aren't explicitly held within a class.
 
 ```ruby
 def say_goodnight(name)

@@ -8,6 +8,8 @@ nav_order: 4
 ## Constants, Variables, String and Numbers
 {: .no_toc }
 
+In Ruby we use `snake_case` to define our variables. The most basic of data types (integers, floats, and strings) are object on which you can call methods.
+
 ### Table of Contents
 {: .no_toc }
 

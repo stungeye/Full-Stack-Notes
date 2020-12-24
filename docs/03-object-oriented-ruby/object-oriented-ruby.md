@@ -302,6 +302,8 @@ Wally Glutton is enrolled at Red River College
 
 ## Class Methods
 
+Class level methods are often called "static" methods in other languages.
+
 ```ruby
 class Student
   def initialize(name, student_number, gpa)
@@ -315,12 +317,20 @@ class Student
     new("Generic Student", 0, 0)
   end
 end
+```
 
+☝️ Here we've created a class level factory method that returns as generic `Student` object. Ruby doesn't have constructor overloading but class methods like this can serve the same purpose.
+
+You do not need an object instance of a class to execute a class method as they are called by way of the class itself:
+
+```ruby
 generic = Student.generic_student
 puts generic.class
 ```
 
 ## Sub-Classes
+
+The less-than operator `<` is used to indicate class inheritance.
 
 ```ruby
 class Mammal

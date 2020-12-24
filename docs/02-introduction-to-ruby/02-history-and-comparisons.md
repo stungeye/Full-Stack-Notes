@@ -8,6 +8,8 @@ nav_order: 2
 ## History and Comparisons
 {: .no_toc }
 
+Ruby was born in 1995, the same year as PHP, Java, and Javascript were first released.
+
 ### Table of Contents
 {: .no_toc }
 
@@ -20,7 +22,7 @@ nav_order: 2
 
 The Ruby programming language was created by a Japanese programmer, Yukihiro Matsumoto (known as "Matz" in the Ruby community). Matz started work on the language sometime in February 1993. The first alpha version was released in December 1994.
 
-Matz main goal in developing Ruby was to create a scripting language that was more powerful than Perl, and more object oriented than Python.
+Matz main goal in developing Ruby was to create a scripting language that was more powerful than Perl, and more object oriented than Python. He blended aspects of his favourite programming languages (Perl, Smalltalk, Eiffel, Ada, and Lisp) to create an expressive new language.
 
 The major guiding philosophy for the language has been "the principle of least surprise". Matz has often said that he is "trying to make Ruby natural, not simple," in a way that mirrors life.
 

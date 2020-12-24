@@ -8,6 +8,8 @@ nav_order: 3
 ## Ruby Basics 
 {: .no_toc }
 
+Everything in Ruby is an object. A few crucial tid-bits of Ruby knowledge to start. 
+
 ### Table of Contents
 {: .no_toc }
 
@@ -101,4 +103,4 @@ if (clown_car == nil)
 end
 ```
 
-This code will error as clown_car is not defined.
+This code will error as `clown_car` is not defined.

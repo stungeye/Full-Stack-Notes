@@ -8,6 +8,8 @@ nav_order: 5
 ## Booleans and Conditions
 {: .no_toc }
 
+Boolean values let us script decisions. 
+
 ### Table of Contents
 {: .no_toc }
 
@@ -69,18 +71,12 @@ puts 'Enough Already' if you_have_had_enough
 Ruby's if statements work like you would expect.
 
 ```ruby
-if (x > 5) then
-  puts 'Yo, x is larger than 5.'
-end
-```
-
-The `then` and the parentheses are optional:
-
-```ruby
 if x > 5
   puts 'Yo, x is still larger than 5.'
 end
 ```
+
+Note that parenthesis around the Boolean expression are optional.
 
 `if` as a modifier:
 
@@ -109,36 +105,22 @@ Note that we use `elsif` and not `else if`.
 The `unless` statement is the bizarro evil twin (the logical inverse) of `if`:
 
 ```ruby
-unless x <= 5
-  puts 'Yo, x is larger than 5'
-else
-  puts 'Sadly, x is less than or equal to 5.'
+unless temperature < 0
+  puts 'Let us go for a stroll.'
 end
 ```
 
-Unless can also be used as a trailing modifier:
+Unless is rarely paired with an `else` and can most often be found as a trailing modifier:
 
 ```ruby
 snow_fort = 'awesome home' unless temperature > 0
 ```
 
-All `unless` statements can be replaced by an `if` statement and an exclamation mark 'not' modifier. However, this usually makes the expression harder to read for humans. (Robots on the other hand love the 'not' modifier.)
+All `unless` statements can be replaced by an `if` statement and an exclamation mark 'not' modifier. However, this sometimes makes the expression harder to read for humans. (Robots on the other hand love the 'not' modifier.)
 
 ```ruby
-if !(x <= 5) # Identical to 'unless x <= 5'
-  puts 'Yo, x is larger than 5'
-else
-  puts 'Sadly, x is less than or equal to 5.'
-end
-```
-
-Simplified:
-
-```ruby
-if x > 5
-  puts 'Yo, x is larger than 5'
-else
-  puts 'Sadly, x is less than or equal to 5.'
+if !(temperature < 0) # Better written as the equivalent: if temperature >= 0
+  puts 'Let us go for a stroll.'
 end
 ```
 
@@ -155,7 +137,7 @@ when 1
 when 2
   puts 'Tea for two.'
   puts 'Two for tea.'
-when (3..10) # Comparing against a range.
+when (3..10) # COOL: Comparing against a range.
   puts "It's a tea party!"
 else
   puts 'I feel claustrophobic.'

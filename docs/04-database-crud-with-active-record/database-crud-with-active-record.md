@@ -1,5 +1,5 @@
 ---
-title: Database CRUD with AR
+title: Database + ActiveRecord = ?
 nav_order: 6
 ---
 
