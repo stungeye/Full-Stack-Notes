@@ -103,7 +103,7 @@ rbenv global 2.7.1
 To install Node and Yarn from the WSL prompt:
 
 ```bash
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -j
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt update
