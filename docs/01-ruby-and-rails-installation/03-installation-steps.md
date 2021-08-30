@@ -234,7 +234,7 @@ Some of my other favourite VS Code extensions for Web Dev are:
 - Visual Studio IntelliCode
 - Debugger for Chrome
 - Docker
-- Pettier
+- Prettier
 - html tag wrapper
 - REST Client
 - PrintCode
