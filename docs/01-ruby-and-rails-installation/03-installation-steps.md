@@ -165,16 +165,16 @@ The output should look something like this, although you version numbers may var
 ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c) [x86_64-linux]
 
 ~ $ rails -v
-Rails 6.1.3.1
+Rails 6.1.4.1
 
 ~ $ git --version
 git version 2.17.1
 
 ~ $ node -v
-v12.22.5
+v12.22.7
 
 ~ $ yarn -v
-1.22.5
+1.22.15
 ```
 
 ## Ruby Editors
