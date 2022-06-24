@@ -26,7 +26,7 @@ Historically Windows support for Ruby and Rails was poor, but this is no longer 
 
 In the past, installing both Ruby and Rails under Windows was time-consuming and error-prone.
 
-We're going to avoid these issues by running Rails on a virtualized Linux care of the Windows Subsystem for Linux (WSL).
+We're going to avoid these issues by running Rails on a virtualized Linux care of the Windows Subsystem for Linux (WSL2).
 
 ## Rails and MacOS
 
