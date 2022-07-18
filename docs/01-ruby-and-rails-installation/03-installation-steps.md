@@ -46,7 +46,28 @@ You may already have the Windows Terminal installed. If not, you can [install it
 
 The Windows Subsystem for Linux (WSL) lets you run a GNU/Linux environment directly on Windows without the overhead of a traditional virtual machine or dualboot setup.
 
-Let's install Ubuntu Linux version on the WSL!
+Let's install Ubuntu Linux version on the WSL! Ideally on WSL2. Installation instructions are provided for both WSL and WSL2 below.
+
+WSL2
+
+Prerequisites
+- You must be running Windows 10 version 2004 and higher (Build 19041 and higher) or Windows 11.
+
+Install WSL2
+
+- Open PowerShell or Windows Command Prompt as adminstrator and run:
+
+`wsl --install`
+
+- Next restart your machine
+
+- Go to WSL Store and install [Ubuntu 20.04.3 LTS (Focal Fossa)] (https://apps.microsoft.com/store/detail/ubuntu-20044-lts/9MTTCL66CPXJ?hl=en-us&gl=US)
+
+- Run Ubuntu 20.04 from the start menu.
+
+- Be sure to save the username and password set for you WSL user account!
+
+WSL
 
 - Open PowerShell as Administrator and run:
 
@@ -62,13 +83,7 @@ Let's install Ubuntu Linux version on the WSL!
 
 - Be sure to save the username and password you set for your WSL user account!
 
-**⚠️ WARNING:** It's crucial that you install Ubuntu 18.04. The WSL currently has issues with Ubuntu 20.04.
-
-### WSL Version Two is Optional
-
-Feel free to update your WSL to the newly released WSL2 by [following these WSL2 update instructions](https://docs.microsoft.com/en-us/windows/wsl/install-win10#step-2---update-to-wsl-2).
-
-**📣 NOTE:** If you upgrade to WSL2 it's important that you save all your Rails projects to the home folder of the WSL filesystem.
+**⚠️ WARNING:** It's crucial that you install Ubuntu 18.04 if using WSL. WSL2 works with Ubuntu 20.04.
 
 Naviagte to your WSL home folder from the terminal and then open it in Windows Explorer like this:
 
