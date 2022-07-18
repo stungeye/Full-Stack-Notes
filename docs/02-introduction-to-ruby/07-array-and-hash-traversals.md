@@ -146,7 +146,7 @@ The `reduce` method lets us write customer reducers. Here's `sum` rewritten as a
 product_prices = [12.34, 839.00, 90.95, 100]
 total_price = product_prices.reduce(0) { |sum, price| sum + price }
 
-# If you're reduce block involves a single operator like this it can be refactored to:
+# If your reduce block involves a single operator like this it can be refactored to:
 total_price = product_prices.reduce(:+)
 ```
 
