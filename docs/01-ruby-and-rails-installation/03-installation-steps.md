@@ -107,8 +107,8 @@ echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
-rbenv install 2.7.1
-rbenv global 2.7.1
+rbenv install 3.1.2
+rbenv global 3.1.2
 ```
 
 **Note:** The install command (second last bullet point) takes a long time. _Patience is a virtue._
@@ -180,7 +180,7 @@ The output should look something like this, although you version numbers may var
 ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c) [x86_64-linux]
 
 ~ $ rails -v
-Rails 6.1.6
+Rails 7.0.4
 
 ~ $ git --version
 git version 2.17.1
