@@ -177,7 +177,7 @@ The output should look something like this, although you version numbers may var
 
 ```bash
 ~ $ ruby -v
-ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c) [x86_64-linux]
+ruby 3.1.2p20 (2022-04-12 revision 4491bb740a) [x86_64-linux]
 
 ~ $ rails -v
 Rails 7.0.4
