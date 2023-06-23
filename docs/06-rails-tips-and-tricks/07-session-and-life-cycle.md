@@ -135,7 +135,7 @@ You can make data available to all views by loading it in the `ApplicationContro
 
 ### Global `helper_method` Example: Menu Data
 
-Imagine you have a `Menu` model with a class method `Menu.top_level_sections` that returns the data you need on every page for the header menu. You could create a `menu_sections` method in your `ApplicationController` and expose it to your views as a `helper_method`.
+Imagine you have a `Menu` model with a class method `Menu.top_level_sections` that returns the data you need on every page for the header menu. You could create a private `menu_sections` method in your `ApplicationController` and expose it to your views as a `helper_method`.
 
 ```ruby
 class ApplicationController < ActionController::Base
