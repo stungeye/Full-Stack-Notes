@@ -142,12 +142,12 @@ class ApplicationController < ActionController::Base
   # Your ApplicationController should always set a forgery protection scheme.
   protect_from_forgery with: :exception 
 
-  private # Expose private controller methods to views:
-  
-  def menu_sections
+  # Expose 'global' data to all views as follows:
+  private 
+  def menu_sections # Create a private method that loads the data you which to export.
     @menu_sections ||= Menu.top_level_sections
   end
-  helper_method :menu_sections # Makes menu_sections method available in all views.
-  # View Usage: <%= render partial: 'menu', object: menu_sections %>
+  helper_method :menu_sections # Make menu_sections method available in all views.
+  # View usage with a partial: <%= render partial: 'menu', object: menu_sections %>
 end
 ```
