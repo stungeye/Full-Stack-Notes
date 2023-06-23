@@ -78,6 +78,31 @@ Note that `some_method`, `method_name` and `another_method` must be defined with
 
 ## Before Filters to Autoload From the Database
 
+At times, your controllers will have groups of actions that all require the same data. 
+
+For example, controllers generated using the `rails scaffold` command have member actions (`show`, `edit`, `update` & `destroy`) that all need to fetch an ActiveRecord object by id.
+
+Imagine a `ProductsController` providing RESTful access to a `Product` model:
+
+```ruby
+class ProductsController < ApplicationController
+  # Run set_product (private method defined below) before all member actions:
+  before_action :set_product, , only: [:show, :edit, :update, :destroy]
+
+  # The show, edit, update, destroy actions, can now all use the @product fetched below.
+  # For example, the show action (GET /products/1):
+  def show
+      # Empty method as @product is loaded by the before_action.
+  end
+
+  private
+    # Used with before_action to share common setup between actions.
+    def set_product
+      @product = Product.find(params[:id]) # Find by the :id param of the GET route.
+    end
+end
+```
+
 ## Before Filters for Simple Auth
 
 Simple username/password protection can be added to a Rails project using HTTP digest authentication. In the application_controller.rb you need to add the following within the class definition:
@@ -103,3 +128,23 @@ before_action :require_sudo, only: [:update, :create, :destroy]
 - [HTTP Authentication Further Simplified](http://guides.rubyonrails.org/action_controller_overview.html#http-authentications)
 
 ## Helper Methods to Preload "Global" Data
+
+Sometimes you need the same collection of data on every page. For example, data to build the site's header menu.
+
+You can make data available to all views by loading it in the `ApplicationController`, the parent class of all your controllers, and exposing it to all your views as a `helper_method`.
+
+### Global `helper_method` Example: Menu Data
+
+Imagine you have a `Menu` model with a class method `Menu.top_level_sections` that returns the data you need on every page for the header menu. You could create a `menu_sections` method in your `ApplicationController` and expose it to your views as a `helper_method`.
+
+```ruby
+class ApplicationController < ActionController::Base
+  protect_from_forgery with: :exception #Your ApplicationController should always set a forgery protection scheme.
+
+  private
+  def menu_sections
+    @menu_sections ||= Menu.top_level_sections
+  end
+  helper_method :menu_sections # This makes it so that you can use this method from your views: <%= render partial: 'menu', object: menu_sections %>
+end
+```
