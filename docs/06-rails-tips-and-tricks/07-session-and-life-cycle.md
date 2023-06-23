@@ -139,12 +139,15 @@ Imagine you have a `Menu` model with a class method `Menu.top_level_sections` th
 
 ```ruby
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception #Your ApplicationController should always set a forgery protection scheme.
+  # Your ApplicationController should always set a forgery protection scheme.
+  protect_from_forgery with: :exception 
 
-  private
+  private # Expose private controller methods to views:
+  
   def menu_sections
     @menu_sections ||= Menu.top_level_sections
   end
-  helper_method :menu_sections # This makes it so that you can use this method from your views: <%= render partial: 'menu', object: menu_sections %>
+  helper_method :menu_sections # Makes menu_sections method available in all views.
+  # View Usage: <%= render partial: 'menu', object: menu_sections %>
 end
 ```
