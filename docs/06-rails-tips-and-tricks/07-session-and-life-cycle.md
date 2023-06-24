@@ -78,7 +78,7 @@ Note that `some_method`, `method_name` and `another_method` must be defined with
 
 ## Before Filters to Autoload From the Database
 
-At times, your controllers will have groups of actions that all require the same data. 
+Use a `before_action` when your controllers have groups of actions that all require the same data. 
 
 For example, controllers generated using the `rails scaffold` command have member actions (`show`, `edit`, `update` & `destroy`) that all need to fetch an ActiveRecord object by id.
 
@@ -145,9 +145,11 @@ class ApplicationController < ActionController::Base
   # Expose 'global' data to all views as follows:
   private 
   def menu_sections # Create a private method that loads the data you which to export.
-    @menu_sections ||= Menu.top_level_sections
+    @menu_sections ||= Menu.top_level_sections # Memoizing as an instance var: https://bit.ly/memoize_ruby
   end
-  helper_method :menu_sections # Make menu_sections method available in all views.
+
+  # Make menu_sections method available in all views:
+  helper_method :menu_sections 
   # View usage with a partial: <%= render partial: 'menu', object: menu_sections %>
 end
 ```
